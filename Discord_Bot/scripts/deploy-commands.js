@@ -29,7 +29,6 @@ async function main() {
   try {
     console.log('Dang dang ky cac lenh slash...');
 
-    // Xoa cac slash command Global cu
     await rest.put(
       Routes.applicationCommands(process.env.CLIENT_ID),
       { body: [] }
