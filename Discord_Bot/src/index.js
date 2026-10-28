@@ -17,7 +17,6 @@ const client = new Client({
   ]
 });
 
-// Nạp các slash commands
 client.commands = new Collection();
 
 const commandsPath = path.join(__dirname, 'commands');
@@ -59,7 +58,6 @@ for (const file of eventFiles) {
   }
 }
 
-// Đăng nhập Discord
 client.login(process.env.DISCORD_TOKEN).catch(error => {
   console.error('Không thể đăng nhập bot:', error);
   process.exitCode = 1;
